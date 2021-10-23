@@ -1,0 +1,126 @@
+Microsoft Windows [Version 10.0.19043.1288]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\이주나\git\gitProjects\BranchExample>git add .
+
+C:\Users\이주나\git\gitProjects\BranchExample>git commit -m "a"
+[main (root-commit) 61e3e75] a
+ 1 file changed, 1 insertion(+)
+ create mode 100644 BranchTest.txt
+
+C:\Users\이주나\git\gitProjects\BranchExample>git add .
+
+C:\Users\이주나\git\gitProjects\BranchExample>git commit -m "c"
+[main 39a25e8] c
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\이주나\git\gitProjects\BranchExample>git log
+commit 39a25e8b8c372163729d3c98316e0bfb459a85bc (HEAD -> main)
+Author: PILGYU JANG <maxjang123@naver.com>
+Date:   Sat Oct 23 23:45:51 2021 +0900
+
+    c
+
+commit 61e3e7551f781d71ad3b8104d7fe6e5d75b79a6f
+Author: PILGYU JANG <maxjang123@naver.com>
+Date:   Sat Oct 23 23:45:30 2021 +0900
+
+    a
+
+C:\Users\이주나\git\gitProjects\BranchExample>git branch
+* main
+
+C:\Users\이주나\git\gitProjects\BranchExample>git branch zunattang
+
+C:\Users\이주나\git\gitProjects\BranchExample>git branch
+* main
+  zunattang
+
+C:\Users\이주나\git\gitProjects\BranchExample>git checkout zunattang
+Switched to branch 'zunattang'
+
+C:\Users\이주나\git\gitProjects\BranchExample>git add .
+
+C:\Users\이주나\git\gitProjects\BranchExample>git commit -m "q"
+[zunattang 4f54aca] q
+ 1 file changed, 1 insertion(+)
+ create mode 100644 zunattang.txt
+
+C:\Users\이주나\git\gitProjects\BranchExample>git branch
+  main
+* zunattang
+
+C:\Users\이주나\git\gitProjects\BranchExample>git log
+commit 4f54aca3b4faee969a17a4445c66044129e12743 (HEAD -> zunattang)
+Author: PILGYU JANG <maxjang123@naver.com>
+Date:   Sat Oct 23 23:47:40 2021 +0900
+
+    q
+
+commit 39a25e8b8c372163729d3c98316e0bfb459a85bc (main)
+Author: PILGYU JANG <maxjang123@naver.com>
+Date:   Sat Oct 23 23:45:51 2021 +0900
+
+    c
+
+commit 61e3e7551f781d71ad3b8104d7fe6e5d75b79a6f
+Author: PILGYU JANG <maxjang123@naver.com>
+Date:   Sat Oct 23 23:45:30 2021 +0900
+
+    a
+
+C:\Users\이주나\git\gitProjects\BranchExample>git checkout main
+Switched to branch 'main'
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+C:\Users\이주나\git\gitProjects\BranchExample>git add .
+
+C:\Users\이주나\git\gitProjects\BranchExample>git commit -m "d"
+[main 8bdc248] d
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\이주나\git\gitProjects\BranchExample>git log
+commit 8bdc2487b345c073dcb9a4f990753b9889eee772 (HEAD -> main)
+Author: PILGYU JANG <maxjang123@naver.com>
+Date:   Sat Oct 23 23:48:52 2021 +0900
+
+    d
+
+commit 39a25e8b8c372163729d3c98316e0bfb459a85bc
+Author: PILGYU JANG <maxjang123@naver.com>
+Date:   Sat Oct 23 23:45:51 2021 +0900
+
+    c
+
+commit 61e3e7551f781d71ad3b8104d7fe6e5d75b79a6f
+Author: PILGYU JANG <maxjang123@naver.com>
+Date:   Sat Oct 23 23:45:30 2021 +0900
+
+    a
+
+C:\Users\이주나\git\gitProjects\BranchExample>git push origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (9/9), 657 bytes | 328.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ZunaTtang/BranchExample.git
+ * [new branch]      main -> main
+
+C:\Users\이주나\git\gitProjects\BranchExample>git push origin zunattang
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 285 bytes | 285.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'zunattang' on GitHub by visiting:
+remote:      https://github.com/ZunaTtang/BranchExample/pull/new/zunattang
+remote:
+To https://github.com/ZunaTtang/BranchExample.git
+ * [new branch]      zunattang -> zunattang
+
+C:\Users\이주나\git\gitProjects\BranchExample>
